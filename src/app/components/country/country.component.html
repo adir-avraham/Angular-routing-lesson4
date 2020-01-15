@@ -1,16 +1,13 @@
 <div class="col-md-4">
 <div class="card mb-4 shadow-lg" style="width: 18rem;">
-    <img src={{countryObj.flag}} class="card-img-top" alt="...">
+    <img src={{countryObj.flag}} class="card-img-top" alt="pic">
     <div class="card-body">
       <h5 class="card-title">{{countryObj.name}}</h5>
     </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">{{countryObj.region}}</li>
-      <li class="list-group-item">population: {{countryObj.population}}</li>
-    </ul>
     <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
+      <button (click)="onClick(countryObj)" class="btn btn-primary btn-sm">
+        <a class="card-link">country-page</a>
+      </button>
     </div>
   </div>
   </div>

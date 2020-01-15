@@ -7,6 +7,7 @@ import { CountriesListComponent } from './components/countries-list/countries-li
 import { CountryComponent } from './components/country/country.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CountryPageComponent } from './components/country-page/country-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CountriesListComponent,
     CountryComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    CountryPageComponent
   ],
   imports: [
     BrowserModule,

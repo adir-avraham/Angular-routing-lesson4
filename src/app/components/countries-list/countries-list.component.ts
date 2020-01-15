@@ -14,6 +14,7 @@ export class CountriesListComponent implements OnInit {
 
   constructor() {
     this.countries = countriesData;
+    
    }
 
   ngOnInit() {
