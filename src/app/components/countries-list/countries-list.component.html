@@ -1,0 +1,13 @@
+<div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Countries page</h1>
+        </div>
+      </div>
+    <div class="container">
+        <div class="row">
+        <app-country *ngFor="let country of countries" [countryObj]="country">
+        </app-country>
+    </div>
+    </div>
+</div>
