@@ -1,6 +1,10 @@
 <p>my-trips works!</p>
-<ul>
-    <li *ngFor="let myTrip of myTrips">
-        {{myTrip.name}}
-    </li>
-</ul>
+
+ <div class="card m-3" style="width: 10rem;" *ngFor="let trip of myTrips" >
+    <img src={{trip.flag}} class="card-img-top" alt="pic">
+    <div class="card-body">
+      <h5 class="card-title">{{trip.name}}</h5>
+      <p class="card-text">{{trip.region}}</p>
+      <button (click)="deleteTrip(trip)" class="btn btn-danger btn-sm">Delete</button>
+    </div>
+  </div>

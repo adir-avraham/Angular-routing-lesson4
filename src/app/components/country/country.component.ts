@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Router } from '@angular/router'
 import { AddToMyTripsService } from '../services/add-trips/add-to-my-trips.service';
+import { CountriesService } from '../services/service-countries/countries.service';
 
 @Component({
   selector: 'app-country',
@@ -12,7 +13,7 @@ import { AddToMyTripsService } from '../services/add-trips/add-to-my-trips.servi
 export class CountryComponent implements OnInit {
   @Input() countryObj: any
   @Output() delEvent = new EventEmitter<any>()
-  constructor(private router: Router, private addToMyTripsService: AddToMyTripsService) { }
+  constructor(private router: Router, private addToMyTripsService: AddToMyTripsService, private countriesService: CountriesService) { }
 
   ngOnInit() {
   }
@@ -22,6 +23,8 @@ export class CountryComponent implements OnInit {
   }
 
   addTrip() {
-    this.addToMyTripsService.addToMyTrips(this.countryObj);
+    this.countriesService.addToMyTrips(this.countryObj)
+
   }
+  
 }
