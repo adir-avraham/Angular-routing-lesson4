@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { CountriesListComponent } from './components/countries-list/countries-list.component';
 import { CountryComponent } from './components/country/country.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CountryPageComponent } from './components/country-page/country-page.component';
+import { RoutesLinksComponent } from './routes-links/routes-links.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { CountryPageComponent } from './components/country-page/country-page.com
     CountryComponent,
     HomeComponent,
     NavbarComponent,
-    CountryPageComponent
+    CountryPageComponent,
+    RoutesLinksComponent
   ],
   imports: [
     BrowserModule,
