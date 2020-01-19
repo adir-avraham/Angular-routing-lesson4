@@ -12,6 +12,10 @@ import { RoutesLinksComponent } from './routes-links/routes-links.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MyTripsComponent } from './components/my-trips/my-trips.component';
 
+
+import { UsersListComponent } from './components/users-list/users-list.component';
+import { UserComponent } from './components/user/user.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +25,9 @@ import { MyTripsComponent } from './components/my-trips/my-trips.component';
     NavbarComponent,
     CountryPageComponent,
     RoutesLinksComponent,
-    MyTripsComponent
+    MyTripsComponent,
+    UsersListComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
