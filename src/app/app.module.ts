@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CountryPageComponent } from './components/country-page/country-page.component';
 import { RoutesLinksComponent } from './routes-links/routes-links.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { MyTripsComponent } from './components/my-trips/my-trips.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     HomeComponent,
     NavbarComponent,
     CountryPageComponent,
-    RoutesLinksComponent
+    RoutesLinksComponent,
+    MyTripsComponent
   ],
   imports: [
     BrowserModule,

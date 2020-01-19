@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import countriesData from '../../../../src/countries.js';
-import { CountriesService } from '../service-countries/countries.service'
+import { CountriesService } from '../services/service-countries/countries.service'
 
 
 @Component({

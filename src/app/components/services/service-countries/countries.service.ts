@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import countriesData from '../../../../src/countries.js';
+import countriesData from '../../../../countries.js';
 
 @Injectable({
   providedIn: 'root'
