@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import countriesData from '../../../../src/countries.js';
-
+//import countriesData from '../../../../src/countries.js';
+import { CountriesService } from '../service-countries/countries.service'
 
 
 @Component({
@@ -12,8 +12,8 @@ export class CountriesListComponent implements OnInit {
 
   public countries: Array<any>;
 
-  constructor() {
-    this.countries = countriesData;
+  constructor(public CountriesService: CountriesService) {
+    this.countries = CountriesService.getCountries();
     
    }
 
