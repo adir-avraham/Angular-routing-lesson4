@@ -11,8 +11,7 @@ export class AddOffersService {
 
   addOffer(offer) {
     this.arrayOfoffers.push(offer)
-    console.log(this.arrayOfoffers);
-    
+   
   }
 
   getOffers() {

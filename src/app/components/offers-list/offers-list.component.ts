@@ -13,11 +13,13 @@ export class OffersListComponent implements OnInit {
    }
 
   ngOnInit() {
-    console.log(this.offers)
+
   }
 
   deleteOffer(customerId) {
+
     this.offers = this.addOffersService.deleteOffer(customerId);
+    this.offers = this.addOffersService.getOffers();
   }
 
 }

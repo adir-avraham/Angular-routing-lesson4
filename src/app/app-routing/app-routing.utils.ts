@@ -25,7 +25,7 @@ export const routes: Array<CustomRoute> = [
     { path: "countries/:name", component: CountryPageComponent, title: "Country", isVisible: false },
     { path: "myTrips", component: MyTripsComponent, title: "My Trips", isVisible: true },
     { path: "users", component: UsersListComponent, title: "Users", isVisible: true },
-    { path: "carsInsurence", component: CarsInsurenceComponent, title: "Cars Insurence", isVisible: true },
+    { path: "carsInsurence", component: CarsInsurenceComponent, title: "Cars Insurance", isVisible: true },
     { path: "offers", component: OffersListComponent, title: "Offers", isVisible: true },
     { path: "**", redirectTo: "home", pathMatch: "full"},
 
