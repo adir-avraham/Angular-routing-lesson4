@@ -17,6 +17,8 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { UserComponent } from './components/user/user.component';
 import { CarsInsurenceComponent } from './components/cars-insurence/cars-insurence.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OffersListComponent } from './components/offers-list/offers-list.component';
+import { OfferComponent } from './components/offer/offer.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UsersListComponent,
     UserComponent,
     CarsInsurenceComponent,
+    OffersListComponent,
+    OfferComponent,
   ],
   imports: [
     BrowserModule,

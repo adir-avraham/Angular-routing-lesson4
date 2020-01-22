@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { AddOffersService } from '../services/add-offers/add-offers.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class CarsInsurenceComponent implements OnInit {
 
   public offerForm;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private addOffersService: AddOffersService) {
 
     this.offerForm = this.formBuilder.group({
       customerName: "", 
@@ -31,7 +32,7 @@ export class CarsInsurenceComponent implements OnInit {
   }
 
   addToOffers() {
-    console.log(this.offerForm.value)
+    this.addOffersService.addOffer(this.offerForm.value)
   }
 
 
