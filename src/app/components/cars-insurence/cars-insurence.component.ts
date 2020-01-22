@@ -43,8 +43,16 @@ export class CarsInsurenceComponent implements OnInit {
 
   addToOffers() {
     this.addOffersService.addOffer(this.offerForm.value);
-    console.log(this.offerForm.value)
-    this.offerForm.reset();
+    this.offerForm.patchValue({
+      customerName: "", 
+      customerId: "",
+      licensePlate: "",
+      year: "",
+      type: "",
+      subType: "",
+      color: "#15a5ea",
+      imageUrl: ""
+    })
   }
 
   getSubTypes() {
