@@ -9,6 +9,7 @@
       <tr>
         <th scope="col">Customer Name</th>
         <th scope="col">Customer Id</th>
+        <th scope="col">Drivers</th>
         <th scope="col">License Plate</th>
         <th scope="col">Year</th>
         <th scope="col">Type</th>
@@ -21,6 +22,7 @@
       <tr *ngFor="let offer of offers">
         <td>{{offer.customerName}}</td>
         <td>{{offer.customerId}}</td>
+        <td>{{offer.driverName1}} {{offer.driverName2}}</td>
         <td>{{offer.licensePlate}}</td>
         <td>{{offer.year}}</td>
         <td>{{offer.type}}</td>

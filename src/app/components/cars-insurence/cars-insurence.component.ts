@@ -11,7 +11,7 @@ import { AddOffersService } from '../services/add-offers/add-offers.service';
 export class CarsInsurenceComponent implements OnInit {
 
   public offerForm;
-
+  public anotherDriver = false;
   public types  = {
     Ferrari: ["F1", "F2"],
     Lamborghini: ["L1", "L2"],  
@@ -31,7 +31,9 @@ export class CarsInsurenceComponent implements OnInit {
       type: "",
       subType: "",
       color: "#15a5ea",
-      imageUrl: ""
+      imageUrl: "",
+      driverName1: "",
+      driverName2: ""
     })
 
   }
@@ -51,15 +53,24 @@ export class CarsInsurenceComponent implements OnInit {
       type: "",
       subType: "",
       color: "#15a5ea",
-      imageUrl: ""
+      imageUrl: "",
+      driverName1: "",
+      driverName2: ""
     })
   }
 
   getSubTypes() {
     const typeValue = this.offerForm.value.type
     this.subTypes = this.types[typeValue]
-    console.log("subtype", this.subTypes) 
+  }
 
+  addAnotherDriver() {
+    this.anotherDriver = !this.anotherDriver;
+    if (!this.anotherDriver) {
+      this.offerForm.patchValue({
+        driverName2: ""
+      })
+    }
   }
 
 

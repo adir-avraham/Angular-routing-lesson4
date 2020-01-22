@@ -7,25 +7,37 @@
   <form [formGroup]="offerForm">
       <div class="form-group row">
           <label for="inputCustomerName" class="col-sm-2 col-form-label">Customer Name</label>
-          <div class="col-sm-6">
+          <div class="col-sm-4">
               <input type="text" formControlName="customerName" class="form-control" id="inputCustomerName">
-            </div>
+          </div>
+          <label for="inputCustomerName" class="col-sm-2 col-form-label">Drivers</label>
+          <div class="col-sm-4">
+             <button class="btn btn-info" type="button" (click)="addAnotherDriver()" >Add driver</button>
+          </div>
         </div>
         <div class="form-group row">
             <label for="inputCustomerId" class="col-sm-2 col-form-label">Customer Id</label>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <input type="number" formControlName="customerId" class="form-control" id="inputCustomerId">
+            </div>
+            <label for="inputDriverrName1" class="col-sm-2 col-form-label">Driver Name(1)</label>
+            <div class="col-sm-4">
+                <input type="text" formControlName="driverName1" class="form-control" id="inputDriverName1">
             </div>
         </div>
         <div class="form-group row">
           <label for="inputLicensePlate" class="col-sm-2 col-form-label">License Plate</label>
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <input type="number" formControlName="licensePlate" class="form-control" id="inputLicensePlate">
+          </div>
+          <label for="inputDriverrName2" class="col-sm-2 col-form-label" [ngClass]="anotherDriver ? 'visible' : 'invisible'">Driver Name(2) </label>
+          <div class="col-sm-4">
+              <input type="text" formControlName="driverName2" class="form-control " id="inputDriverName2" [ngClass]="anotherDriver ? 'visible' : 'invisible'">
           </div>
         </div>
       <div class="form-group row">
         <label for="inputYear" class="col-sm-2 col-form-label">Year</label>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <select type="number" formControlName="year" class="form-control" id="inputYear">
             <option>2020</option>
             <option>2019</option>  
@@ -36,7 +48,7 @@
       </div>
       <div class="form-group row">
         <label for="inputType" class="col-sm-2 col-form-label">Type</label>
-        <div class="col-sm-2">
+        <div class="col-sm-4">
           <select type="text" formControlName="type" class="form-control" id="inputType" (change)="getSubTypes()">
             <option>Ferrari</option>
             <option>Lamborghini</option>  
@@ -44,8 +56,11 @@
             <option>Volkswagen</option>        
         </select>
         </div>
-        <label for="inputSubType" class="col-sm-2 col-form-label">Sub-type</label>
-        <div class="col-sm-2">
+      
+      </div>
+      <div class="form-group row">
+  <label for="inputSubType" class="col-sm-2 col-form-label">Sub-type</label>
+        <div class="col-sm-4">
           <select type="text" formControlName="subType" class="form-control" id="inputSubType">
             <option>Choose..</option>
             <option *ngFor="let subType of subTypes" >{{subType}}</option>  
@@ -54,13 +69,13 @@
       </div>
       <div class="form-group row">
         <label for="inputColor" class="col-sm-2 col-form-label">Color</label>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <input type="color" formControlName="color" class="form-control" id="inputColor">
         </div>
       </div>
       <div class="form-group row">
         <label for="inputImageUrl" class="col-sm-2 col-form-label">Picture Url</label>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <input type="text" formControlName="imageUrl" class="form-control" value="" id="inputImageUrl">
         </div>
       </div>
@@ -72,3 +87,4 @@
     </div>
   </form>
   </div>
+
