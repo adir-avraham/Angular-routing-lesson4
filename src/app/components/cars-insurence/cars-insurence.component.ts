@@ -12,6 +12,15 @@ export class CarsInsurenceComponent implements OnInit {
 
   public offerForm;
 
+  public types  = {
+    Ferrari: ["F1", "F2"],
+    Lamborghini: ["L1", "L2"],  
+    Porsche: ["P1", "P2"],  
+    Volkswagen: ["V1", "V2"]
+}
+
+  public subTypes;
+
   constructor(private formBuilder: FormBuilder, private addOffersService: AddOffersService) {
 
     this.offerForm = this.formBuilder.group({
@@ -29,11 +38,20 @@ export class CarsInsurenceComponent implements OnInit {
 
 
   ngOnInit() {
+
   }
 
   addToOffers() {
     this.addOffersService.addOffer(this.offerForm.value);
+    console.log(this.offerForm.value)
     this.offerForm.reset();
+  }
+
+  getSubTypes() {
+    const typeValue = this.offerForm.value.type
+    this.subTypes = this.types[typeValue]
+    console.log("subtype", this.subTypes) 
+
   }
 
 
