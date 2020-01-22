@@ -15,6 +15,8 @@ import { MyTripsComponent } from './components/my-trips/my-trips.component';
 
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { UserComponent } from './components/user/user.component';
+import { CarsInsurenceComponent } from './components/cars-insurence/cars-insurence.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,11 +29,14 @@ import { UserComponent } from './components/user/user.component';
     RoutesLinksComponent,
     MyTripsComponent,
     UsersListComponent,
-    UserComponent
+    UserComponent,
+    CarsInsurenceComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
