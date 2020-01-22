@@ -32,7 +32,8 @@ export class CarsInsurenceComponent implements OnInit {
   }
 
   addToOffers() {
-    this.addOffersService.addOffer(this.offerForm.value)
+    this.addOffersService.addOffer(this.offerForm.value);
+    this.offerForm.reset();
   }
 
 

@@ -26,7 +26,7 @@
         <td>{{offer.type}}</td>
         <td>{{offer.subType}}</td>
         <td  [ngStyle]="{'background-color': offer.color}">{{offer.color}}</td>
-        <td> <img height="35px" width="50px">{{imageUrl}} </td>
+        <td> <img height="40px" width="60px" [src]="offer.imageUrl"> </td>
         <td><button (click)="deleteOffer(offer.customerId)" class="btn btn-danger btn-sm" >X</button></td>
       </tr>
       <tr>
